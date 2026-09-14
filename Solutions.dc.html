@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./image-slot.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nos Solutions — La Cuisine de Jeanine</title>
+  <meta name="description" content="Frigo connecté dès 350€/mois, plateaux repas et prestations sur-mesure : découvrez les solutions de restauration d'entreprise de La Cuisine de Jeanine.">
+  <link rel="icon" href="assets/favicon-vert.png">
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <style>
+    /* ---------- HERO (page intérieure) ---------- */
+    .page-hero{padding:56px 0 40px}
+    .page-hero h1{font-size:clamp(2.3rem,4.6vw,3.4rem);margin:14px 0 18px;color:var(--green-dark)}
+    .page-hero p.lead{font-size:17px;line-height:1.65;color:var(--text-muted-beige);margin:0;max-width:620px}
+    .quicklinks{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .quicklinks a{padding:10px 20px;border-radius:100px;font-weight:600;font-size:14px}
+
+    /* ---------- FRIGO (détail) ---------- */
+    .frigo-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:64px}
+    @media(max-width:900px){ .frigo-detail-grid{grid-template-columns:1fr} }
+    .frigo-detail-photo{border-radius:2px;overflow:hidden;aspect-ratio:4/3}
+    .feature-list{display:flex;flex-direction:column;gap:11px;font-size:15px;color:var(--text-muted-green);margin-bottom:28px}
+    .feature-list div{display:flex;gap:10px;align-items:flex-start}
+    .feature-list div::before{content:'✓';color:var(--peach);font-weight:700;flex-shrink:0}
+
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-bottom:56px}
+    .step-num{font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:var(--peach);margin-bottom:10px}
+    .step-title{font-weight:700;margin-bottom:6px}
+    .step-desc{font-size:14px;color:var(--text-muted-green);line-height:1.5}
+
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;background:rgba(237,230,215,0.08);border-radius:2px;padding:36px;margin-bottom:16px}
+    .info-title{font-weight:700;margin-bottom:6px;color:var(--peach)}
+    .info-val{font-size:14px;color:var(--text-muted-green)}
+    .dims-note{font-size:13.5px;color:var(--text-muted-green)}
+
+    /* ---------- FAQ ---------- */
+    .faq-section{max-width:840px;margin:0 auto}
+    .faq-head{text-align:center;margin-bottom:48px}
+    .faq-head h2{font-size:clamp(1.8rem,3.6vw,2.4rem);margin:14px 0 0;color:var(--green-dark)}
+    .faq-list{display:flex;flex-direction:column;gap:12px}
+    .faq-item{border:1px solid var(--line-on-beige);border-radius:2px;overflow:hidden;background:var(--beige-paper)}
+    .faq-q{padding:20px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px}
+    .faq-q span:first-child{font-weight:600;font-size:16px;color:var(--green-dark)}
+    .faq-sign{font-family:'Outfit',sans-serif;font-size:20px;color:var(--green);flex-shrink:0}
+    .faq-a{padding:0 24px 22px;font-size:15px;line-height:1.6;color:var(--text-muted-beige)}
+
+    /* ---------- PLATEAUX ---------- */
+    .plateaux-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+    @media(max-width:900px){ .plateaux-grid{grid-template-columns:1fr} }
+    .plateaux-photo{border-radius:2px;overflow:hidden;aspect-ratio:4/3}
+    .plateaux-stats{display:flex;gap:28px;margin-bottom:24px;flex-wrap:wrap}
+    .plateaux-stats .num{font-family:'Outfit',sans-serif;font-size:24px;font-weight:800;color:var(--green)}
+    .plateaux-stats .lbl{font-size:13px;color:var(--text-muted-beige)}
+    .feature-list-beige{display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--text-muted-beige);margin-bottom:28px}
+    .feature-list-beige div{display:flex;align-items:center;gap:10px}
+
+    /* ---------- ÉVÉNEMENTS ---------- */
+    .evt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px}
+    .evt-card{background:var(--beige-paper);border:1px solid var(--line-on-beige);border-radius:2px;padding:28px}
+    .evt-card img{height:32px;width:auto;margin-bottom:12px}
+    .evt-card .t{font-weight:700;font-size:16px;margin-bottom:8px;color:var(--green-dark)}
+    .evt-card .d{font-size:14px;color:var(--text-muted-beige);line-height:1.5}
+  </style>
+</helmet>
+
+<div class="page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="Accueil.dc.html" class="brand">
+        <img src="assets/mark-icon.png" alt="La Cuisine de Jeanine">
+        <span>La&nbsp;Cuisine de&nbsp;Jeanine</span>
+      </a>
+      <nav class="{{ navClass }}" id="mainNav">
+        <a href="Accueil.dc.html" onClick="{{ closeNav }}">Accueil</a>
+        <a href="Solutions.dc.html" class="active" onClick="{{ closeNav }}">Nos solutions</a>
+        <a href="A-Propos.dc.html" onClick="{{ closeNav }}">L'entreprise</a>
+        <a href="Contact.dc.html" onClick="{{ closeNav }}">Contact</a>
+        <a href="Contact.dc.html" class="btn btn-primary" onClick="{{ closeNav }}">Parlons-nous <span>→</span></a>
+      </nav>
+      <button class="nav-toggle" onClick="{{ toggleNav }}" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="page-hero wrap">
+      <span class="eyebrow" style="color:var(--green)">Nos solutions</span>
+      <h1 class="disp">Des solutions adaptées à vos besoins</h1>
+      <p class="lead">Frigo connecté, plateaux repas ou prestations événementielles : découvrez nos offres sur-mesure pour votre entreprise.</p>
+      <div class="quicklinks">
+        <a href="#frigo" class="btn-ghost-green" style="border:1.5px solid var(--green);color:var(--green)">Frigo Connecté</a>
+        <a href="#plateaux" class="btn-ghost-green" style="border:1.5px solid var(--green);color:var(--green)">Plateaux Repas</a>
+        <a href="#evenements" class="btn-ghost-green" style="border:1.5px solid var(--green);color:var(--green)">Prestations &amp; Événements</a>
+      </div>
+    </section>
+
+    <!-- ============ LE FRIGO CONNECTÉ ============ -->
+    <section id="frigo" class="sec-pad bg-green kicker-cream" style="padding-top:64px">
+      <div class="wrap">
+        <div class="frigo-detail-grid">
+          <div class="reveal">
+            <img src="assets/icons/frigo-connecte.svg" alt="" style="height:40px;width:auto;margin-bottom:14px;filter:invert(1) brightness(1.5) sepia(1) hue-rotate(50deg) saturate(0);opacity:0.9">
+            <span class="eyebrow" style="color:var(--peach)">Solution phare</span>
+            <h2 class="disp" style="font-size:clamp(1.9rem,3.8vw,2.6rem);margin:12px 0 18px">Le Frigo Connecté</h2>
+            <p style="font-size:16px;line-height:1.65;color:var(--text-muted-green);margin:0 0 22px">La cantine digitale de proximité. Un frigo intelligent installé dans vos locaux, approvisionné quotidiennement en produits frais et plats cuisinés maison.</p>
+            <div class="price-callout">
+              <span class="amount">À partir de 350&nbsp;€&nbsp;/&nbsp;mois</span>
+              <span class="note">Tarif adapté à la taille, la localisation et les besoins de votre entreprise.</span>
+            </div>
+            <div class="feature-list">
+              <div>Accessible 24h/24, 7j/7 — horaires classiques ou décalés, en 3×8, chacun se restaure quand son rythme le permet</div>
+              <div>Produits frais renouvelés quotidiennement</div>
+              <div>Paiement par badge ou carte bancaire</div>
+              <div>Installation et maintenance incluses</div>
+              <div>Menu hebdomadaire renouvelé : 2 entrées, 5 plats, 2 desserts, chaque semaine</div>
+            </div>
+            <a href="Contact.dc.html" class="btn btn-cream">Demander un devis <span>→</span></a>
+            <p class="diff-note" style="color:var(--text-muted-green)"><strong style="color:var(--cream)">Ce n'est pas un distributeur de plats industriels.</strong> C'est notre cuisine, à Étoutteville, qui prépare vos repas — le frigo n'est que le moyen de vous les apporter.</p>
+          </div>
+          <div class="reveal frigo-detail-photo">
+            <image-slot id="frigo-photo" shape="rect" src="assets/photos/frigo-openit.jpg" placeholder="Photo, frigo connecté"></image-slot>
+          </div>
+        </div>
+
+        <div class="steps-grid reveal">
+          <div>
+            <div class="step-num disp">01</div>
+            <div class="step-title">Passez votre carte</div>
+            <div class="step-desc">CB ou titre-restaurant. Pré-autorisation, comme à la pompe à essence.</div>
+          </div>
+          <div>
+            <div class="step-num disp">02</div>
+            <div class="step-title">Le frigo s'ouvre</div>
+            <div class="step-desc">Choisissez librement parmi tous les produits frais disponibles.</div>
+          </div>
+          <div>
+            <div class="step-num disp">03</div>
+            <div class="step-title">Refermez la porte</div>
+            <div class="step-desc">Le frigo détecte vos articles. Débit uniquement de ce que vous prenez.</div>
+          </div>
+          <div>
+            <div class="step-num disp">04</div>
+            <div class="step-title">Profitez !</div>
+            <div class="step-desc">Produits frais, cuisinés maison, prêts à déguster.</div>
+          </div>
+        </div>
+
+        <div class="info-grid reveal">
+          <div><div class="info-title">Disponibilité</div><div class="info-val">24h/24, 7j/7</div></div>
+          <div><div class="info-title">Paiement</div><div class="info-val">Carte bancaire ou carte déjeuner</div></div>
+          <div><div class="info-title">Qualité</div><div class="info-val">Produits frais sélectionnés par nos soins</div></div>
+          <div><div class="info-title">Fraîcheur</div><div class="info-val">Livraison tous les matins</div></div>
+        </div>
+        <div class="dims-note">Dimensions : hauteur 2200 mm · largeur 948 mm · profondeur 710 mm, connectique Ethernet (RJ45), modem 4G disponible en option.</div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="sec-pad bg-beige faq-section">
+      <div class="wrap">
+        <div class="faq-head reveal">
+          <span class="eyebrow" style="color:var(--green)">Questions fréquentes</span>
+          <h2 class="disp">Le coin des questions / réponses</h2>
+        </div>
+        <div class="faq-list reveal">
+          <sc-for list="{{ faqItems }}" as="item" hint-placeholder-count="6">
+            <div class="faq-item">
+              <div class="faq-q" onClick="{{ item.onClick }}">
+                <span>{{ item.q }}</span>
+                <span class="faq-sign disp">{{ item.sign }}</span>
+              </div>
+              <sc-if value="{{ item.open }}" hint-placeholder-val="{{ false }}">
+                <div class="faq-a">{{ item.a }}</div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLATEAUX REPAS ============ -->
+    <section id="plateaux" class="sec-pad bg-beige-deep">
+      <div class="wrap plateaux-grid">
+        <div class="reveal plateaux-photo">
+          <image-slot id="plateaux-photo" shape="rect" src="assets/photos/plateau-repas.jpg" placeholder="Photo, plateau repas"></image-slot>
+        </div>
+        <div class="reveal">
+          <img src="assets/icons/plateau-repas.svg" alt="" style="height:40px;width:auto;margin-bottom:14px">
+          <span class="eyebrow" style="color:var(--green)">Livraison quotidienne</span>
+          <h2 class="disp" style="font-size:clamp(1.9rem,3.8vw,2.4rem);margin:12px 0 18px">Plateaux Repas</h2>
+          <p style="font-size:16px;line-height:1.65;color:var(--text-muted-beige);margin:0 0 24px">Pas encore équipé d'un frigo connecté ? Notre équipe vous livre des repas complets, équilibrés et savoureux directement dans votre entreprise. Le menu change chaque semaine pour varier les plaisirs.</p>
+          <div class="plateaux-stats">
+            <div><div class="num disp">2</div><div class="lbl">Entrées au choix</div></div>
+            <div><div class="num disp">5</div><div class="lbl">Plats au choix</div></div>
+            <div><div class="num disp">2</div><div class="lbl">Desserts au choix</div></div>
+          </div>
+          <div class="feature-list-beige">
+            <div><img src="assets/icons/home-made.svg" alt="" style="height:24px;width:auto">Fait maison, produits frais et de saison</div>
+            <div><img src="assets/icons/vegetarien.svg" alt="" style="height:24px;width:auto">Viandes françaises, options végétariennes</div>
+            <div>Gamme snacking et boissons complémentaire</div>
+            <div>Commande avec minimum requis</div>
+          </div>
+          <a href="Contact.dc.html" class="btn btn-primary">Demander un devis <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÉVÉNEMENTS ============ -->
+    <section id="evenements" class="sec-pad bg-beige">
+      <div class="wrap">
+        <div class="reveal" style="max-width:640px;margin-bottom:48px">
+          <span class="eyebrow" style="color:var(--green)">Sur-mesure</span>
+          <h2 class="disp" style="font-size:clamp(1.9rem,3.6vw,2.4rem);margin:12px 0 16px;color:var(--green-dark)">Prestations &amp; Événements</h2>
+          <p style="font-size:16px;line-height:1.65;color:var(--text-muted-beige);margin:0">Pour vos séminaires, réunions, cocktails ou événements d'entreprise, nous concevons des prestations sur-mesure, organisées pour vos équipes.</p>
+        </div>
+        <div class="evt-grid reveal">
+          <div class="evt-card"><img src="assets/icons/petit-dej.svg" alt=""><div class="t">Petit-déjeuner &amp; pauses café</div><div class="d">Viennoiseries, jus frais, boissons chaudes</div></div>
+          <div class="evt-card"><img src="assets/icons/diner-affaire.svg" alt=""><div class="t">Déjeuners &amp; repas d'affaires</div><div class="d">Buffets gourmands ou service à table, adaptés à vos contraintes</div></div>
+          <div class="evt-card"><img src="assets/icons/cocktail.svg" alt=""><div class="t">Cocktails &amp; réceptions</div><div class="d">Canapés, verrines, pièces salées &amp; sucrées</div></div>
+          <div class="evt-card"><img src="assets/icons/seminaire.svg" alt=""><div class="t">Séminaires &amp; journées d'étude</div><div class="d">Offres complètes avec pauses, repas et organisation sur-mesure</div></div>
+        </div>
+        <a href="Contact.dc.html" class="btn btn-primary reveal">Demander un devis <span>→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <img src="assets/mark-icon-white.png" alt="La Cuisine de Jeanine">
+            <span>La Cuisine de Jeanine</span>
+          </div>
+          <p class="desc">Restauration d'entreprise, cuisinée localement. Frigo connecté et prestations sur-mesure en Seine-Maritime.</p>
+          <div class="foot-social">
+            <a href="https://www.linkedin.com/company/la-cuisine-de-jeanine">LinkedIn</a>
+            <a href="https://www.facebook.com/p/La-Cuisine-de-Jeanine-61559807420124/">Facebook</a>
+            <a href="https://www.instagram.com/lacuisinedejeanine/">Instagram</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <div class="flinks">
+            <a href="Accueil.dc.html">Accueil</a>
+            <a href="Solutions.dc.html">Nos Solutions</a>
+            <a href="A-Propos.dc.html">À Propos</a>
+            <a href="Contact.dc.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="flinks">
+            <a href="mailto:contact@lacuisinedejeanine.fr">contact@lacuisinedejeanine.fr</a>
+            <span>Seine-Maritime (76)</span>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div>© 2026 La Cuisine de Jeanine. Tous droits réservés.</div>
+        <div class="flegal">
+          <a href="Mentions-Legales.dc.html">Mentions légales</a>
+          <a href="Mentions-Legales.dc.html#confidentialite">Politique de confidentialité</a>
+          <a href="Mentions-Legales.dc.html#cgu">CGU</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    navOpen: false,
+    faqOpen: 0,
+    faqData: [
+      { q: "Comment fonctionne le paiement sur le frigo connecté ?", a: "Vous présentez votre carte bancaire ou carte déjeuner : une pré-autorisation est effectuée, comme à la pompe à essence. Le frigo se déverrouille, vous choisissez vos produits, puis refermez la porte — vous êtes débité uniquement de ce que vous avez pris." },
+      { q: "Comment le frigo détecte-t-il les produits pris ?", a: "Notre frigo détecte automatiquement les produits présents à l'intérieur. La facturation se fait ensuite en toute simplicité, sans action supplémentaire de votre part." },
+      { q: "Quelle connectivité est nécessaire ?", a: "Nos frigos sont équipés d'une prise Ethernet (RJ45) et, si nécessaire, peuvent être complétés d'un modem 4G pour s'adapter à leur futur emplacement." },
+      { q: "Qui s'occupe de la maintenance et du réapprovisionnement ?", a: "Notre fournisseur assure la maintenance et le service technique de l'équipement. Le nettoyage des frigos et la livraison des produits sont assurés tous les matins pour garantir fraîcheur et qualité." },
+      { q: "Proposez-vous des options végétariennes ?", a: "Oui, nos plateaux repas et notre frigo connecté proposent systématiquement des options végétariennes en plus de la gamme classique." },
+      { q: "Quelle est votre zone d'intervention ?", a: "Nous intervenons dans toute la Seine-Maritime (76). Contactez-nous pour vérifier la disponibilité sur votre secteur." }
+    ]
+  };
+
+  toggleNav(e) {
+    if (e) e.preventDefault();
+    this.setState(s => ({ navOpen: !s.navOpen }));
+  }
+
+  closeNav() {
+    this.setState({ navOpen: false });
+  }
+
+  toggleFaq(i) {
+    this.setState(s => ({ faqOpen: s.faqOpen === i ? -1 : i }));
+  }
+
+  componentDidMount() {
+    var items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      this._io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.01, rootMargin: '0px 0px -10% 0px' });
+      items.forEach(function (el) { this._io.observe(el); }.bind(this));
+    } else {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+    this._revealTimer = setTimeout(function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    }, 2200);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._revealTimer) clearTimeout(this._revealTimer);
+  }
+
+  renderVals() {
+    const faqItems = this.state.faqData.map((f, i) => ({
+      q: f.q,
+      a: f.a,
+      open: this.state.faqOpen === i,
+      sign: this.state.faqOpen === i ? "–" : "+",
+      onClick: () => this.toggleFaq(i)
+    }));
+    return {
+      navClass: this.state.navOpen ? 'main-nav open' : 'main-nav',
+      toggleNav: (e) => this.toggleNav(e),
+      closeNav: () => this.closeNav(),
+      faqItems
+    };
+  }
+}
+</script>
+</body>
+</html>

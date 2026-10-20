@@ -5,4 +5,4 @@ Le site de production sera hébergé sur Hostinger (lacuisinedejeanine.fr).
 
 - Racine du dépôt : site généré pour GitHub Pages.
 - `sources/` : fichiers de travail. `python build.py` génère la version Hostinger (`dist/`),
-  `python build.py github /lcdjsite` génère la version GitHub Pages (`dist-github/`).
+  `python build.py github /LCDJsite` génère la version GitHub Pages (`dist-github/`).

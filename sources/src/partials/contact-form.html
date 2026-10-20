@@ -1,0 +1,46 @@
+<!-- ================= DEVIS / CONTACT ================= -->
+<section class="section contact contact-light" id="devis">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Parlons-en</span>
+      <h2>Ça pourrait marcher chez vous ?</h2>
+      <p class="lead">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
+      <ul class="contact-points">
+        <li>Étude personnalisée et devis gratuits</li>
+        <li>Réponse sous 24 h ouvrées</li>
+      </ul>
+      <div class="contact-direct">
+        <a href="mailto:contact@lacuisinedejeanine.fr">{{icon:mail}} contact@lacuisinedejeanine.fr</a>
+      </div>
+    </div>
+
+    <form class="form-card reveal d1" id="devisForm" action="/contact.php" method="post" novalidate>
+      <h3>Votre demande</h3>
+      <p>2 minutes, et on s'occupe du reste.</p>
+      <div class="form-row">
+        <div class="field"><label for="f-nom">Nom et prénom *</label><input id="f-nom" name="nom" autocomplete="name" required maxlength="120"></div>
+        <div class="field"><label for="f-entreprise">Entreprise *</label><input id="f-entreprise" name="entreprise" autocomplete="organization" required maxlength="120"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="f-email">Email professionnel *</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+        <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel" maxlength="30"></div>
+      </div>
+      <fieldset class="field">
+        <legend>Ce qui vous intéresse</legend>
+        <div class="chips">
+          <label><input type="checkbox" name="interet[]" value="Frigo connecté"{{checked:Frigo connecté}}><span>Frigo connecté</span></label>
+          <label><input type="checkbox" name="interet[]" value="Plateaux repas"{{checked:Plateaux repas}}><span>Plateaux repas</span></label>
+          <label><input type="checkbox" name="interet[]" value="Traiteur / événement" data-motif-box="evenement"{{checked:Traiteur}}><span>Traiteur / événement</span></label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="f-msg">Votre message</label><textarea id="f-msg" name="message" maxlength="3000" placeholder="Votre adresse, vos horaires, vos besoins…"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="f-site">Ne pas remplir</label><input id="f-site" name="site_web" tabindex="-1" autocomplete="off"></div>
+      <input type="hidden" name="ts" id="f-ts" value="">
+      <div class="form-foot">
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        <button type="submit" class="btn btn-primary">Envoyer ma demande {{icon:arrow}}</button>
+        <p class="form-legal">Vos informations servent uniquement à répondre à votre demande. <a href="/mentions-legales/#confidentialite">Politique de confidentialité</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>

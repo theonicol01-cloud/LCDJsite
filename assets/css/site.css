@@ -703,9 +703,9 @@ fieldset.field{border:0;padding:0;margin:0 0 18px;min-width:0}
 .trio-offers__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
 .offer2{display:flex;flex-direction:column;text-decoration:none;color:var(--brown)}
 .offer2 figure{position:relative;margin-bottom:22px;overflow:hidden;border-radius:var(--r)}
-.offer2 img{width:100%;aspect-ratio:4/4.4;object-fit:cover;transition:transform .5s var(--ease)}
+.offer2 figure img{width:100%;aspect-ratio:4/4.4;object-fit:cover;transition:transform .5s var(--ease)}
 .offer2 img.fit-bowl{object-position:50% 50%}
-.offer2:hover img{transform:scale(1.03)}
+.offer2:hover figure img{transform:scale(1.03)}
 .offer2 .tag{position:absolute;left:14px;top:14px;background:var(--rouge);color:var(--cream);font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
 .offer2 h3{font-weight:800;text-transform:uppercase;font-size:clamp(1.35rem,1.9vw,1.7rem);color:var(--green);margin-bottom:6px}
 .offer2__hook{font-weight:600;margin:0 0 10px}
@@ -735,3 +735,41 @@ fieldset.field{border:0;padding:0;margin:0 0 18px;min-width:0}
 /* pages intérieures : photos de tête arrondies, posées dans la page */
 .ph-product{min-height:min(calc(84svh - 74px),760px)}
 .ph-product__text{justify-content:center}
+
+/* ==========================================================================
+   ILLUSTRATIONS DE LA CHARTE — posées avec parcimonie, une par bloc au plus
+   ========================================================================== */
+img.doodle{display:block;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:0;pointer-events:none;user-select:none;filter:none}
+/* accueil */
+.doodle.doodle--hero{position:absolute;top:-34px;right:-26px;width:130px;transform:rotate(8deg);z-index:2}
+.offer2__title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:6px}
+.offer2__title h3{margin:0}
+.doodle.doodle--offer{width:auto;height:58px;flex-shrink:0;transition:transform .35s var(--ease)}
+.offer2:hover .doodle.doodle--offer{transform:rotate(-6deg)}
+.voices--short__grid{position:relative}
+.doodle.doodle--voices{position:absolute;right:var(--gutter);top:-110px;width:96px;transform:rotate(-8deg)}
+/* frigo */
+.band__text{position:relative}
+.doodle.doodle--band{position:absolute;right:clamp(30px,5vw,80px);top:clamp(60px,8vw,120px);width:52px;opacity:.9}
+.price-poster__left{display:flex;align-items:flex-end;gap:clamp(16px,2vw,28px)}
+.doodle.doodle--price{width:clamp(70px,7vw,104px);margin-bottom:34px}
+/* plateaux */
+.menu-card{position:relative}
+.doodle.doodle--menu{position:absolute;right:clamp(20px,3vw,40px);top:clamp(20px,2.4vw,30px);width:88px}
+.duo__text .doodle.doodle--duo{width:96px;margin:0 0 18px}
+/* traiteur */
+.has-doodle{position:relative}
+.doodle.doodle--prest{width:92px;margin-bottom:18px}
+.doodle.doodle--mosaic{width:96px;margin-bottom:16px;transform:rotate(-10deg)}
+/* histoire */
+.doodle.doodle--side{width:min(180px,80%);margin-top:30px}
+.pullquote p{max-width:17em}
+.pullquote__illu{width:min(20vw,240px)!important;right:5%!important;bottom:50%!important;transform:translateY(50%) rotate(-12deg);opacity:.16!important}
+.doodle.doodle--trio{width:84px;margin-bottom:16px}
+@media(max-width:900px){
+  .doodle.doodle--hero{width:88px;top:-30px;left:8px;right:auto;transform:rotate(-8deg)}
+  .doodle.doodle--voices{top:-80px;width:70px}
+  .doodle.doodle--band{top:56px;right:var(--gutter);width:40px}
+  .doodle.doodle--menu{position:static;width:60px;margin:0 0 4px auto}
+  .doodle.doodle--side{display:none}
+}

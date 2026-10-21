@@ -70,32 +70,31 @@
 <main id="contenu">
 
 
-<section class="page-hero-simple">
+<section class="ph-simple">
   <div class="wrap">
     <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/LCDJsite/">Accueil</a><span aria-hidden="true">/</span><span>Contact</span></nav>
-    <span class="eyebrow">Devis gratuit</span>
-    <h1>Parlons de votre entreprise</h1>
+    <span class="folio c-green">Devis gratuit</span>
+    <h1 class="t-big">Parlons de votre entreprise</h1>
     <p class="lead">Frigo connecté, plateaux repas ou événement : dites-nous ce dont vous avez besoin, on revient vers vous avec une proposition adaptée.</p>
   </div>
 </section>
 
 <!-- ================= DEVIS / CONTACT ================= -->
-<section class="section contact contact-light" id="devis">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Parlons-en</span>
-      <h2>Ça pourrait marcher chez vous ?</h2>
-      <p class="lead">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
-      <ul class="contact-points">
+<section class="contact" id="devis">
+  <div class="wrap contact__grid">
+    <div>
+      <span class="folio">Parlons-en</span>
+      <h2 class="t-big contact__intro">Ça pourrait marcher chez vous ?</h2>
+      <p class="lead contact__intro">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
+      <ul class="contact__points">
         <li>Étude personnalisée et devis gratuits</li>
         <li>Réponse sous 24 h ouvrées</li>
+        <li>Partout en Seine-Maritime (76)</li>
       </ul>
-      <div class="contact-direct">
-        <a href="mailto:contact@lacuisinedejeanine.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> contact@lacuisinedejeanine.fr</a>
-      </div>
+      <a class="contact__mail" href="mailto:contact@lacuisinedejeanine.fr">contact@lacuisinedejeanine.fr</a>
     </div>
 
-    <form class="form-card reveal d1" id="devisForm" action="/LCDJsite/contact.php" method="post" novalidate>
+    <form class="form" id="devisForm" action="/LCDJsite/contact.php" method="post" novalidate>
       <h3>Votre demande</h3>
       <p>2 minutes, et on s'occupe du reste.</p>
       <div class="form-row">
@@ -119,7 +118,7 @@
       <input type="hidden" name="ts" id="f-ts" value="">
       <div class="form-foot">
         <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-        <button type="submit" class="btn btn-primary">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        <button type="submit" class="btn">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
         <p class="form-legal">Vos informations servent uniquement à répondre à votre demande. <a href="/LCDJsite/mentions-legales/#confidentialite">Politique de confidentialité</a>.</p>
       </div>
     </form>

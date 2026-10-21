@@ -6,101 +6,103 @@
   "form_pick": "Plateaux repas"
 } -->
 
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div class="hero-anim">
+<!-- ================= EN-TÊTE : le bol posé sur la page ================= -->
+<section class="ph-plate">
+  <div class="wrap ph-plate__grid">
+    <div>
       <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><span>Plateaux repas</span></nav>
-      <span class="eyebrow">Livraison dans vos locaux · à partir de 18 € HT</span>
-      <h1>Le déjeuner maison, livré au bureau.</h1>
+      <span class="folio c-green">Livraison dans vos locaux</span>
+      <h1 class="t-big">Le déjeuner maison, livré au bureau.</h1>
       <p class="lead">Pas encore de frigo connecté ? On vous livre des repas complets, cuisinés maison en Normandie. Le menu change chaque semaine pour varier les plaisirs.</p>
-      <div class="page-hero-ctas">
-        <a href="#devis" class="btn btn-primary">Demander un devis {{icon:arrow}}</a>
-        <a href="#menu" class="btn btn-outline">Voir la formule</a>
+      <div class="actions">
+        <a href="#devis" class="btn">Demander un devis {{icon:arrow}}</a>
+        <a href="#menu" class="link c-green">Voir la formule</a>
       </div>
     </div>
-    <div class="page-hero-photo hero-visual">
-      <img src="/assets/img/plat-riz-volaille-800.webp"
-           srcset="/assets/img/plat-riz-volaille-480.webp 480w, /assets/img/plat-riz-volaille-800.webp 800w"
-           sizes="(max-width: 900px) 90vw, 480px" width="800" height="1000" fetchpriority="high"
-           alt="Bol maison : volaille mijotée, riz blanc et condiment frais">
-    </div>
+    <figure class="ph-plate__bowl">
+      <img src="/assets/img/bol-riz-1400.webp"
+           srcset="/assets/img/bol-riz-600.webp 600w, /assets/img/bol-riz-1000.webp 1000w, /assets/img/bol-riz-1400.webp 1400w"
+           sizes="(max-width: 900px) 100vw, 50vw" width="1400" height="1400" fetchpriority="high"
+           alt="Bol maison vu de dessus : volaille mijotée, riz blanc et condiment frais">
+      <p class="pastille"><span><small>à partir de</small><strong>18 €</strong><small>HT / pers.</small></span></p>
+    </figure>
   </div>
 </section>
 
-<!-- ================= FORMULE ================= -->
-<section class="section bg-green" id="menu">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">La formule</span>
-        <h2>Chaque semaine, un nouveau menu</h2>
-      </div>
+<!-- ================= LA FORMULE : la carte ================= -->
+<section class="menu-section" id="menu">
+  <div class="wrap menu-section__grid">
+    <div>
+      <span class="folio">La formule</span>
+      <h2 class="t-title">Chaque semaine, un nouveau menu</h2>
       <p class="lead">Un plateau complet, avec le menu de la semaine puisé dans plus de 200 recettes maison.</p>
     </div>
-    <div class="plateau-grid reveal">
-      <div class="cards-3">
-        <div class="card"><h3>Une entrée</h3><p>Au choix dans le menu de la semaine, avec des produits frais et de saison.</p></div>
-        <div class="card"><h3>Un plat</h3><p>Au choix, cuisiné maison : des recettes de famille généreuses, viandes françaises.</p></div>
-        <div class="card"><h3>Un dessert</h3><p>Au choix, fait maison, comme la mousse au chocolat qui a déjà ses fans.</p></div>
-      </div>
-      <div class="plateau-price">
-        <p class="plus">+ pain et fromage compris</p>
-        <p class="price"><small>À partir de</small>18 € HT<small>par personne</small></p>
-        <p class="note">Boissons en supplément</p>
-      </div>
+    <div class="menu-card">
+      <h4>Le plateau</h4>
+      <div class="menu-row"><b>Une entrée</b><i></i><span>au choix</span></div>
+      <small class="menu-note">Au choix dans le menu de la semaine, avec des produits frais et de saison.</small>
+      <div class="menu-row"><b>Un plat</b><i></i><span>au choix</span></div>
+      <small class="menu-note">Au choix, cuisiné maison : des recettes de famille généreuses, viandes françaises.</small>
+      <div class="menu-row"><b>Un dessert</b><i></i><span>au choix</span></div>
+      <small class="menu-note">Au choix, fait maison, comme la mousse au chocolat qui a déjà ses fans.</small>
+      <div class="menu-row"><b>Pain &amp; fromage</b><i></i><span>compris</span></div>
+      <div class="menu-row"><b>Boissons</b><i></i><span>en supplément</span></div>
+      <p class="menu-total"><span>à partir de</span><strong>18 € HT</strong><span>par personne</span></p>
     </div>
   </div>
 </section>
 
-<!-- ================= NOTRE CUISINE ================= -->
-<section class="section">
-  <div class="wrap split">
-    <div class="photo-duo reveal">
-      <figure><img src="/assets/img/plat-lasagnes-800.webp" srcset="/assets/img/plat-lasagnes-480.webp 480w, /assets/img/plat-lasagnes-800.webp 800w" sizes="(max-width: 900px) 45vw, 280px" width="800" height="1000" loading="lazy" alt="Lasagnes maison gratinées en bol"></figure>
-      <figure><img src="/assets/img/plat-riz-volaille-800.webp" srcset="/assets/img/plat-riz-volaille-480.webp 480w, /assets/img/plat-riz-volaille-800.webp 800w" sizes="(max-width: 900px) 45vw, 280px" width="800" height="1000" loading="lazy" alt="Volaille mijotée et riz en bol"></figure>
-    </div>
-    <div class="reveal d1">
-      <span class="eyebrow">Dans l'assiette</span>
+<!-- ================= DANS L'ASSIETTE ================= -->
+<section class="duo">
+  <div class="wrap duo__grid">
+    <figure class="duo__a">
+      <img src="/assets/img/bol-lasagnes-1000.webp" srcset="/assets/img/bol-lasagnes-600.webp 600w, /assets/img/bol-lasagnes-1000.webp 1000w, /assets/img/bol-lasagnes-1400.webp 1400w"
+           sizes="(max-width: 900px) 50vw, 40vw" width="1000" height="1000" loading="lazy" alt="Lasagnes maison gratinées en bol, vue de dessus">
+      <figcaption>Lasagnes maison, gratinées au four</figcaption>
+    </figure>
+    <figure class="duo__b">
+      <img src="/assets/img/plat-poulet-800.webp" srcset="/assets/img/plat-poulet-480.webp 480w, /assets/img/plat-poulet-800.webp 800w"
+           sizes="(max-width: 900px) 50vw, 32vw" width="800" height="1000" loading="lazy" alt="Volaille mijotée en sauce et riz, en gros plan">
+      <figcaption>Volaille mijotée, riz parfumé</figcaption>
+    </figure>
+    <div class="duo__text">
+      <span class="folio">Dans l'assiette</span>
       <h2>Des plats qu'on pourrait faire chez soi</h2>
       <p>Tout est préparé dans notre cuisine, à partir de produits frais. Pas de plats industriels réchauffés : des recettes de famille, généreuses, pensées pour une vraie pause déjeuner.</p>
-      <ul class="checklist">
+      <ul class="includes stack">
         <li>Fait maison, produits frais et de saison</li>
         <li>Viandes françaises</li>
-                <li>Pain et fromage compris, boissons en supplément</li>
+        <li>Pain et fromage compris, boissons en supplément</li>
       </ul>
-      <a href="#devis" class="btn btn-green">Parlons de vos besoins {{icon:arrow}}</a>
+      <a href="#devis" class="link c-green">Parlons de vos besoins {{icon:arrow}}</a>
     </div>
   </div>
 </section>
 
-<!-- ================= COMMENT ÇA SE PASSE ================= -->
-<section class="section bg-cream">
+<!-- ================= MISE EN PLACE ================= -->
+<section class="timeline">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">Mise en place</span>
-        <h2>Comment ça se passe</h2>
-      </div>
-    </div>
-    <div class="cards-3 reveal">
-      <div class="card"><span class="num">01</span><h3>On fait le point</h3><p>Nombre de collaborateurs, jours de livraison, adresse : on construit la formule avec vous.</p></div>
-      <div class="card"><span class="num">02</span><h3>On cuisine pour vous</h3><p>Vos repas sont préparés dans notre cuisine en Normandie, avec le menu de la semaine.</p></div>
-      <div class="card"><span class="num">03</span><h3>On livre chez vous</h3><p>Les plateaux arrivent dans vos locaux, prêts à être dégustés. Un minimum de commande est demandé.</p></div>
-    </div>
+    <span class="folio">Mise en place</span>
+    <h2 class="t-title">Comment ça se passe</h2>
+    <ol>
+      <li><h3>On fait le point</h3><p>Nombre de collaborateurs, jours de livraison, adresse : on construit la formule avec vous.</p></li>
+      <li><h3>On cuisine pour vous</h3><p>Vos repas sont préparés dans notre cuisine en Normandie, avec le menu de la semaine.</p></li>
+      <li><h3>On livre chez vous</h3><p>Les plateaux arrivent dans vos locaux, prêts à être dégustés. Un minimum de commande est demandé.</p></li>
+    </ol>
   </div>
 </section>
 
-{{partial:reviews}}
+{{partial:reviews-mousse}}
 
 <!-- ================= FAQ ================= -->
-<section class="section bg-cream" id="faq">
-  <div class="wrap faq-grid">
-    <div class="reveal">
-      <span class="eyebrow">Questions fréquentes</span>
-      <h2>Les plateaux repas en questions</h2>
-      <p class="lead">Une autre question ? Écrivez-nous à <a href="mailto:contact@lacuisinedejeanine.fr"><b>contact@lacuisinedejeanine.fr</b></a>.</p>
+<section class="faq" id="faq">
+  <div class="wrap faq__grid">
+    <div>
+      <span class="folio">Questions fréquentes</span>
+      <h2 class="t-title">Les plateaux repas en questions</h2>
+      <p class="lead">Une autre question ? Écrivez-nous à <a href="mailto:contact@lacuisinedejeanine.fr" class="c-green"><b>contact@lacuisinedejeanine.fr</b></a>.</p>
     </div>
-    <div class="faq-list reveal d1">
+    <div class="faq__list">
       <details open>
         <summary>Y a-t-il un minimum de commande ? <i>{{icon:plus}}</i></summary>
         <p>Oui, un minimum de commande est demandé pour chaque livraison. On vous le précise dans notre proposition.</p>

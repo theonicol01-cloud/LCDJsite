@@ -39,33 +39,6 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNav(false); });
   }
 
-  /* ---- apparition au scroll ---- */
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('in'); });
-  }
-
-
-  /* ---- carrousel d'avis ---- */
-  document.querySelectorAll('.carousel').forEach(function (track) {
-    var section = track.closest('section');
-    if (!section) return;
-    section.querySelectorAll('.carousel-btn').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var card = track.querySelector('.review');
-        var step = card ? card.getBoundingClientRect().width + 20 : 300;
-        track.scrollBy({ left: step * Number(b.dataset.dir), behavior: 'smooth' });
-      });
-    });
-  });
-
   /* ---- boutons qui pré-cochent un motif dans le formulaire ---- */
   document.querySelectorAll('[data-motif]').forEach(function (a) {
     a.addEventListener('click', function () {

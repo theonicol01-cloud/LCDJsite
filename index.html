@@ -70,263 +70,233 @@
 <main id="contenu">
 
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-anim">
-      <span class="eyebrow">Restauration d'entreprise · Rouen &amp; Seine-Maritime</span>
-      <h1>Des recettes de famille, <span class="accent">au bureau.</span></h1>
-      <p class="lead">Frigo connecté ouvert 24h/24, plateaux repas et traiteur pour vos événements. Tout est cuisiné maison en Normandie et livré chaque matin. Vous, vous n'avez rien à gérer.</p>
-      <div class="hero-ctas">
-        <a href="#devis" class="btn btn-primary">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-        <a href="#solutions" class="btn btn-outline">Nos solutions</a>
-      </div>
-      <a class="rating" href="#avis">
-        <span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span>
-        <span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
-        <span><strong>5/5</strong> sur Google</span>
-      </a>
+<!-- ================= OUVERTURE : grand titre + photo à fond perdu ================= -->
+<section class="home-hero">
+  <div class="home-hero__text">
+    <span class="folio c-green">Restauration d'entreprise · Rouen &amp; Seine-Maritime</span>
+    <h1 class="t-affiche">Des recettes de famille, <span>au bureau.</span></h1>
+    <p class="lead">Frigo connecté ouvert 24h/24, plateaux repas et traiteur pour vos événements. Tout est cuisiné maison en Normandie et livré chaque matin. Vous, vous n'avez rien à gérer.</p>
+    <div class="actions">
+      <a href="#devis" class="btn">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="#solutions" class="link">Nos solutions</a>
     </div>
-
-    <div class="hero-visual">
-      <div class="hero-photo">
-        <img src="/LCDJsite/assets/img/hero-frigo-equipe-800.webp"
-             srcset="/LCDJsite/assets/img/hero-frigo-equipe-480.webp 480w, /LCDJsite/assets/img/hero-frigo-equipe-800.webp 800w, /LCDJsite/assets/img/hero-frigo-equipe-full.webp 1024w"
-             sizes="(max-width: 960px) 90vw, 500px" width="800" height="1000"
-             alt="Deux collaborateurs devant le frigo connecté La Cuisine de Jeanine, dans l'espace pause de leur entreprise"
-             fetchpriority="high">
-      </div>
-      <div class="price-badge"><div><small>à partir de</small><strong>350 €</strong><small>HT / mois</small></div></div>
-      <img class="illu sticker hero-sticker" src="/LCDJsite/assets/brand/cafe-croissant.svg" alt="" width="150" height="80">
+    <div class="proof">
+      <a href="#avis"><span class="stars"><span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span></span> 5/5 sur Google</a>
+      <span>Ils nous font confiance</span>
+      <img src="/LCDJsite/assets/logos/abeille.png" alt="Abeille Assurances" height="20" width="72" loading="lazy">
+      <img src="/LCDJsite/assets/logos/alstom.png" alt="Alstom" height="20" width="78" loading="lazy">
+      <img src="/LCDJsite/assets/logos/frameip.png" alt="Groupe Frame iP" height="20" width="72" loading="lazy">
+      <span class="proof-name">Agence Arise</span>
     </div>
   </div>
+  <figure class="home-hero__photo">
+    <img src="/LCDJsite/assets/img/hero-frigo-equipe-full.webp"
+         srcset="/LCDJsite/assets/img/hero-frigo-equipe-480.webp 480w, /LCDJsite/assets/img/hero-frigo-equipe-800.webp 800w, /LCDJsite/assets/img/hero-frigo-equipe-full.webp 1024w"
+         sizes="(max-width: 900px) 100vw, 45vw" width="1024" height="1280"
+         alt="Deux collaborateurs devant le frigo connecté La Cuisine de Jeanine, dans l'espace pause de leur entreprise"
+         fetchpriority="high">
+    <p class="pastille"><span><small>à partir de</small><strong>350 €</strong><small>HT / mois</small></span></p>
+  </figure>
 </section>
 
-<!-- ================= LOGOS CLIENTS ================= -->
-<section class="logos-band" aria-label="Ils nous font confiance">
-  <div class="wrap logos-inner">
-    <p>Ils nous font confiance</p>
-    <div class="logos-row">
-      <img src="/LCDJsite/assets/logos/abeille.png" alt="Abeille Assurances" height="28" width="100" loading="lazy">
-      <img src="/LCDJsite/assets/logos/alstom.png" alt="Alstom" height="28" width="110" loading="lazy">
-      <img src="/LCDJsite/assets/logos/frameip.png" alt="Groupe Frame iP" height="28" width="100" loading="lazy">
-      <span class="logo-text">Agence Arise</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PHRASE DE MARQUE ================= -->
-<section class="statement">
-  <img class="illu statement-l" src="/LCDJsite/assets/brand/saladier.svg" alt="" width="190" height="160" loading="lazy">
-  <img class="illu statement-r" src="/LCDJsite/assets/brand/assiette-coeur.svg" alt="" width="150" height="160" loading="lazy">
+<!-- ================= MANIFESTE ================= -->
+<section class="manifesto">
+  <img class="manifesto__illu" src="/LCDJsite/assets/brand/jeanine-cuisine-creme.svg" alt="" width="620" height="460" loading="lazy">
   <div class="wrap">
-    <p class="statement-text reveal">On cuisine pour vos équipes comme on cuisinerait pour <span>notre famille</span> : des produits frais, des recettes généreuses, et la même exigence que <span>Jeanine</span>.</p>
+    <span class="folio">La maison</span>
+    <p class="t-statement">On cuisine pour vos équipes comme on cuisinerait pour <em>notre famille</em> : des produits frais, des recettes généreuses, et la même exigence que <em>Jeanine</em>.</p>
   </div>
 </section>
 
 <!-- ================= SOLUTIONS ================= -->
-<section class="section section-tight" id="solutions">
-  <div class="wrap">
-    <div class="section-head center-head reveal">
-      <span class="eyebrow">Nos solutions</span>
-      <h2>Trois façons de bien manger au travail</h2>
-      <p class="lead">Une équipe de 15 ou de 300, des horaires de bureau ou en 3×8 : on adapte la formule à votre entreprise.</p>
+<section class="offers-intro" id="solutions">
+  <div class="wrap head-split">
+    <div>
+      <span class="folio">Nos solutions</span>
+      <h2 class="t-title">Trois façons de bien manger au travail</h2>
     </div>
-    <div class="offer-grid">
-      <a href="/LCDJsite/frigo-connecte/" class="offer reveal">
-        <figure class="offer-photo">
-          <img src="/LCDJsite/assets/img/frigo-seul-800.webp"
-               srcset="/LCDJsite/assets/img/frigo-seul-480.webp 480w, /LCDJsite/assets/img/frigo-seul-800.webp 800w"
-               sizes="(max-width: 900px) 100vw, 380px" width="800" height="1000" loading="lazy" class="pos-frigo"
-               alt="Frigo connecté La Cuisine de Jeanine installé dans l'espace pause d'une entreprise">
-          <span class="pastille">À partir de 350 € HT/mois</span>
-        </figure>
-        <div class="offer-body">
-          <h3>Frigo connecté</h3>
-          <p class="offer-hook">Une cantine gourmande, à toute heure.</p>
-          <p>Des plats maison accessibles 24h/24 dans vos locaux, réassortis chaque matin, payés par carte bancaire ou titre-restaurant.</p>
-          <ul class="tags"><li>24h/24</li><li>Installation incluse</li><li>Zéro gestion</li></ul>
-          <span class="sol-link">Découvrir le frigo <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></i></span>
-        </div>
-      </a>
-      <a href="/LCDJsite/plateaux-repas/" class="offer reveal d1">
-        <figure class="offer-photo">
-          <img src="/LCDJsite/assets/img/plat-riz-volaille-800.webp"
-               srcset="/LCDJsite/assets/img/plat-riz-volaille-480.webp 480w, /LCDJsite/assets/img/plat-riz-volaille-800.webp 800w"
-               sizes="(max-width: 900px) 100vw, 380px" width="800" height="1000" loading="lazy"
-               alt="Bol maison de La Cuisine de Jeanine : volaille mijotée, riz et condiment">
-          <span class="pastille">À partir de 18 € HT</span>
-        </figure>
-        <div class="offer-body">
-          <h3>Plateaux repas</h3>
-          <p class="offer-hook">Le déjeuner maison, livré au bureau.</p>
-          <p>Entrée, plat et dessert au choix dans le menu de la semaine, avec pain et fromage, livrés dans vos locaux.</p>
-          <ul class="tags"><li>Menu de la semaine</li><li>Pain et fromage compris</li></ul>
-          <span class="sol-link">Voir les plateaux <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></i></span>
-        </div>
-      </a>
-      <a href="/LCDJsite/traiteur-evenements/" class="offer reveal d2">
-        <figure class="offer-photo">
-          <img src="/LCDJsite/assets/img/traiteur-buffet-800.webp"
-               srcset="/LCDJsite/assets/img/traiteur-buffet-480.webp 480w, /LCDJsite/assets/img/traiteur-buffet-800.webp 800w"
-               sizes="(max-width: 900px) 100vw, 380px" width="800" height="1000" loading="lazy"
-               alt="Buffet traiteur : paniers de pain grillé et planche de charcuterie et fromages">
-          <span class="pastille">Sur-mesure</span>
-        </figure>
-        <div class="offer-body">
-          <h3>Traiteur &amp; événements</h3>
-          <p class="offer-hook">Vos grands moments, notre cuisine.</p>
-          <p>Petits-déjeuners, déjeuners d'affaires, cocktails et séminaires, composés avec vous.</p>
-          <ul class="tags"><li>Séminaires</li><li>Cocktails</li><li>Petits-déjeuners</li></ul>
-          <span class="sol-link">Organiser un événement <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></i></span>
-        </div>
-      </a>
-    </div>
+    <p class="lead">Une équipe de 15 ou de 300, des horaires de bureau ou en 3×8 : on adapte la formule à votre entreprise.</p>
   </div>
 </section>
 
+<!-- 01 · Frigo : photo à fond perdu à gauche -->
+<article class="offer-frigo">
+  <figure class="offer-frigo__photo">
+    <img src="/LCDJsite/assets/img/frigo-espace-pause-1200.webp"
+         srcset="/LCDJsite/assets/img/frigo-espace-pause-800.webp 800w, /LCDJsite/assets/img/frigo-espace-pause-1200.webp 1200w, /LCDJsite/assets/img/frigo-espace-pause-full.webp 1280w"
+         sizes="(max-width: 900px) 100vw, 56vw" width="1200" height="800" loading="lazy"
+         alt="Frigo connecté La Cuisine de Jeanine installé dans l'espace pause d'une entreprise">
+  </figure>
+  <div class="offer-frigo__text">
+    <span class="num-label">01</span>
+    <h3 class="t-name">Frigo connecté</h3>
+    <p class="t-sub">Une cantine gourmande, à toute heure.</p>
+    <p>Des plats maison accessibles 24h/24 dans vos locaux, réassortis chaque matin, payés par carte bancaire ou titre-restaurant.</p>
+    <p class="price-line"><span>à partir de</span><strong>350 € HT</strong><span>par mois</span></p>
+    <p class="tags-line">24h/24 · Installation incluse · Zéro gestion</p>
+    <a href="/LCDJsite/frigo-connecte/" class="link">Découvrir le frigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </div>
+</article>
+
+<!-- 02 · Plateaux : la carte du menu -->
+<article class="offer-plateaux">
+  <div class="wrap offer-plateaux__grid">
+    <div>
+      <span class="num-label">02</span>
+      <h3 class="t-name">Plateaux repas</h3>
+      <p class="t-sub">Le déjeuner maison, livré au bureau.</p>
+      <p class="muted">Entrée, plat et dessert au choix dans le menu de la semaine, avec pain et fromage, livrés dans vos locaux.</p>
+      <a href="/LCDJsite/plateaux-repas/" class="link">Voir les plateaux <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="offer-plateaux__visual">
+      <img src="/LCDJsite/assets/img/bol-riz-1000.webp"
+           srcset="/LCDJsite/assets/img/bol-riz-600.webp 600w, /LCDJsite/assets/img/bol-riz-1000.webp 1000w, /LCDJsite/assets/img/bol-riz-1400.webp 1400w"
+           sizes="(max-width: 900px) 100vw, 46vw" width="1000" height="1000" loading="lazy"
+           alt="Bol maison de La Cuisine de Jeanine : volaille mijotée et riz, vue de dessus">
+      <div class="menu-card">
+        <h4>Le menu de la semaine</h4>
+        <p class="menu-row"><b>Entrée</b><i></i><span>au choix</span></p>
+        <p class="menu-row"><b>Plat</b><i></i><span>au choix</span></p>
+        <p class="menu-row"><b>Dessert</b><i></i><span>au choix</span></p>
+        <p class="menu-row"><b>Pain &amp; fromage</b><i></i><span>compris</span></p>
+        <p class="menu-total"><span>à partir de</span><strong>18 € HT</strong><span>par personne</span></p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- 03 · Traiteur : photo pleine largeur -->
+<article class="offer-traiteur">
+  <figure class="offer-traiteur__photo">
+    <img src="/LCDJsite/assets/img/traiteur-buffet-wide-1920.webp"
+         srcset="/LCDJsite/assets/img/traiteur-buffet-wide-1200.webp 1200w, /LCDJsite/assets/img/traiteur-buffet-wide-1920.webp 1920w"
+         sizes="100vw" width="1920" height="1200" loading="lazy"
+         alt="Buffet traiteur : paniers de pain grillé et planche de charcuterie et fromages">
+  </figure>
+  <div class="offer-traiteur__panel">
+    <span class="num-label">03</span>
+    <h3 class="t-name">Traiteur &amp; événements</h3>
+    <p class="t-sub">Vos grands moments, notre cuisine.</p>
+    <p>Petits-déjeuners, déjeuners d'affaires, cocktails et séminaires, composés avec vous.</p>
+    <a href="/LCDJsite/traiteur-evenements/" class="link c-beige">Organiser un événement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </div>
+</article>
+
 <!-- ================= NOTRE CUISINE ================= -->
-<section class="section bg-cream" id="cuisine">
-  <div class="wrap kitchen-grid">
-    <div class="reveal">
-      <span class="eyebrow">Notre cuisine</span>
-      <h2>Une cuisine maison, variée et généreuse</h2>
+<section class="kitchen" id="cuisine">
+  <div class="wrap kitchen__grid">
+    <div class="kitchen__head">
+      <span class="folio">Notre cuisine</span>
+      <h2 class="t-title">Une cuisine maison, variée et généreuse</h2>
       <p class="lead">Pas de plats industriels réchauffés : tout est cuisiné chez nous, en Normandie, à partir de produits frais et de recettes de famille.</p>
-      <ul class="facts">
+    </div>
+    <figure class="kitchen__macro">
+      <img src="/LCDJsite/assets/img/focaccia-wide-1200.webp"
+           srcset="/LCDJsite/assets/img/focaccia-wide-1200.webp 1200w, /LCDJsite/assets/img/focaccia-wide-1920.webp 1920w"
+           sizes="(max-width: 900px) 100vw, 56vw" width="1200" height="675" loading="lazy"
+           alt="Focaccia maison garnie de lard, tomates séchées, groseilles et jeunes pousses, en gros plan">
+    </figure>
+    <figure class="kitchen__bowl kb-1">
+      <img src="/LCDJsite/assets/img/plat-poulet-800.webp" srcset="/LCDJsite/assets/img/plat-poulet-480.webp 480w, /LCDJsite/assets/img/plat-poulet-800.webp 800w"
+           sizes="(max-width: 900px) 50vw, 30vw" width="800" height="1000" loading="lazy" alt="Émincé de volaille en sauce sur riz, en gros plan">
+      <figcaption>Volaille en sauce, riz parfumé</figcaption>
+    </figure>
+    <figure class="kitchen__bowl kb-2">
+      <img src="/LCDJsite/assets/img/bol-lasagnes-1000.webp" srcset="/LCDJsite/assets/img/bol-lasagnes-600.webp 600w, /LCDJsite/assets/img/bol-lasagnes-1000.webp 1000w"
+           sizes="(max-width: 900px) 50vw, 30vw" width="1000" height="1000" loading="lazy" alt="Lasagnes maison gratinées en bol, vue de dessus">
+      <figcaption>Lasagnes maison gratinées</figcaption>
+    </figure>
+    <div class="kitchen__side">
+      <ul class="kitchen__facts">
         <li><b>Chaque semaine</b><span>une nouvelle carte</span></li>
         <li><b>200+</b><span>recettes maison au répertoire</span></li>
         <li><b>Normandie</b><span>tout est cuisiné chez nous</span></li>
         <li><b>Viandes</b><span>françaises</span></li>
       </ul>
-      <a href="/LCDJsite/plateaux-repas/" class="btn btn-green">Voir le menu des plateaux <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-    </div>
-    <div class="dish-grid reveal d1">
-      <figure><img src="/LCDJsite/assets/img/plat-riz-volaille-480.webp" width="480" height="600" loading="lazy" alt="Bol de volaille mijotée et riz, vue de dessus"></figure>
-      <figure><img src="/LCDJsite/assets/img/traiteur-focaccia-480.webp" width="480" height="600" loading="lazy" alt="Focaccia maison garnie, en gros plan"></figure>
-      <figure><img src="/LCDJsite/assets/img/plat-poulet-480.webp" width="480" height="600" loading="lazy" alt="Émincé de volaille en sauce sur riz, en gros plan"></figure>
-      <figure><img src="/LCDJsite/assets/img/plat-lasagnes-480.webp" width="480" height="600" loading="lazy" alt="Lasagnes maison gratinées en bol, vue de dessus"></figure>
+      <a href="/LCDJsite/plateaux-repas/" class="link c-green">Voir le menu des plateaux <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
 <!-- ================= COMMENT ÇA MARCHE ================= -->
-<section class="section bg-green has-deco" id="fonctionnement">
-  <img class="illu watermark how-wm" src="/LCDJsite/assets/brand/bol-creme.svg" alt="" width="520" height="520" loading="lazy">
-  <div class="wrap how-grid">
-    <div class="how-visual reveal">
-      <div class="photo">
-        <img src="/LCDJsite/assets/img/frigo-choix-800.webp"
-             srcset="/LCDJsite/assets/img/frigo-choix-480.webp 480w, /LCDJsite/assets/img/frigo-choix-800.webp 800w, /LCDJsite/assets/img/frigo-choix-full.webp 1024w"
-             sizes="(max-width: 960px) 90vw, 480px" width="800" height="1000" loading="lazy"
-             alt="Un collaborateur ouvre le frigo connecté pour choisir son repas">
+<section class="howto" id="fonctionnement">
+  <div class="wrap">
+    <div class="howto__head">
+      <div>
+        <span class="folio">Le frigo connecté</span>
+        <h2 class="t-title">Simple comme ouvrir un frigo</h2>
       </div>
+      <a href="/LCDJsite/frigo-connecte/" class="link c-beige">Tout savoir sur le frigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
     </div>
-    <div class="reveal d1">
-      <span class="eyebrow">Le frigo connecté</span>
-      <h2>Simple comme ouvrir un frigo</h2>
-      <ol class="steps">
-        <li class="step"><span class="step-num">01</span><div><h3>Passez votre carte</h3><p>Carte bancaire ou carte déjeuner : une pré-autorisation, comme à la pompe à essence.</p></div></li>
-        <li class="step"><span class="step-num">02</span><div><h3>La porte se déverrouille</h3><p>Prenez ce qui vous fait envie parmi les plats, entrées et desserts du jour.</p></div></li>
-        <li class="step"><span class="step-num">03</span><div><h3>Refermez, c'est payé</h3><p>Le frigo reconnaît automatiquement les produits pris. Vous n'êtes débité que de ceux-là.</p></div></li>
-      </ol>
-      <a href="/LCDJsite/frigo-connecte/" class="btn btn-light how-cta">Tout savoir sur le frigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-    </div>
+    <ol class="howto__steps">
+      <li><span class="outline-num" aria-hidden="true">1</span><h3>Passez votre carte</h3><p>Carte bancaire ou carte déjeuner : une pré-autorisation, comme à la pompe à essence.</p></li>
+      <li><span class="outline-num" aria-hidden="true">2</span><h3>La porte se déverrouille</h3><p>Prenez ce qui vous fait envie parmi les plats, entrées et desserts du jour.</p></li>
+      <li><span class="outline-num" aria-hidden="true">3</span><h3>Refermez, c'est payé</h3><p>Le frigo reconnaît automatiquement les produits pris. Vous n'êtes débité que de ceux-là.</p></li>
+    </ol>
   </div>
 </section>
 
-<!-- ================= AVIS (carrousel) ================= -->
-<section class="section reviews" id="avis">
+<!-- ================= AVIS : une grande voix, puis les autres ================= -->
+<section class="voices" id="avis">
   <div class="wrap">
-    <div class="reviews-head reveal">
-      <div>
-        <span class="eyebrow">Avis clients</span>
-        <h2>Ils en parlent mieux que nous</h2>
-      </div>
-      <div class="reviews-tools">
-        <div class="reviews-score">
-          <span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span>
-          <b>5/5</b>
-          <div><span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><small>Avis Google</small></div>
-        </div>
-        <div class="carousel-nav">
-          <button type="button" class="carousel-btn" data-dir="-1" aria-label="Avis précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
-          <button type="button" class="carousel-btn" data-dir="1" aria-label="Avis suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
-        </div>
+    <span class="folio">Avis clients · Ils en parlent mieux que nous</span>
+    <blockquote class="voices__main t-statement">Des plats savoureux, généreux, faits avec soin, qui transforment vraiment la pause déjeuner.</blockquote>
+    <p class="voices__ctx">Depuis quelques semaines, La Cuisine de Jeanine nourrit notre équipe au bureau. Chaque repas déclenche son lot de « hmmm », de « trop bon » et de « c'est quoi comme ingrédient ? ».</p>
+    <p class="voices__who">Agence Arise<small>Client entreprise · Avis Google 5/5</small></p>
+    <div class="voices__more">
+      <blockquote>Cela fait déjà la 5ème fois que l'on retrouve une mousse au chocolat et quel plaisir à chaque fois de découvrir une nouvelle recette ! Je recommande vivement à toute personne voulant allier plaisir et découverte pendant sa pause déj.<cite>Adam · Avis Google</cite></blockquote>
+      <blockquote>J'ai essayé la mousse au chocolat et franchement elle est excellente 🔥🔥🔥<cite>Ando R. · Avis Google</cite></blockquote>
+      <blockquote>Le bonheur de découvrir son plat sur son lieu de travail… un délice pour les papilles.<cite>A. C. · Avis Google</cite></blockquote>
+      <div class="google-score">
+        <b>5/5</b>
+        <span class="stars"><span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span></span>
+        <a class="link" href="https://share.google/crG01oWA2XvBEBfjL" target="_blank" rel="noopener">Tous nos avis Google <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
       </div>
     </div>
-  </div>
-  <div class="carousel" tabindex="0" aria-label="Avis de nos clients">
-    <figure class="review">
-      <span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
-      <p class="review-title">« Un vrai plaisir au quotidien »</p>
-      <blockquote>Depuis quelques semaines, La Cuisine de Jeanine nourrit notre équipe au bureau. Chaque repas déclenche son lot de « hmmm », de « trop bon » et de « c'est quoi comme ingrédient ? ». Des plats savoureux, généreux, faits avec soin, qui transforment vraiment la pause déjeuner.</blockquote>
-      <figcaption class="who"><span class="avatar">AA</span><div><b>Agence Arise</b><small>Client entreprise</small></div></figcaption>
-    </figure>
-    <figure class="review">
-      <span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
-      <p class="review-title">« Une nouvelle recette à chaque fois »</p>
-      <blockquote>Cela fait déjà la 5ème fois que l'on retrouve une mousse au chocolat et quel plaisir à chaque fois de découvrir une nouvelle recette ! Je recommande vivement à toute personne voulant allier plaisir et découverte pendant sa pause déj.</blockquote>
-      <figcaption class="who"><span class="avatar">A</span><div><b>Adam</b><small>Avis Google</small></div></figcaption>
-    </figure>
-    <figure class="review">
-      <span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
-      <p class="review-title">« Franchement excellente »</p>
-      <blockquote>J'ai essayé la mousse au chocolat et franchement elle est excellente 🔥🔥🔥</blockquote>
-      <figcaption class="who"><span class="avatar">AR</span><div><b>Ando R.</b><small>Avis Google</small></div></figcaption>
-    </figure>
-    <figure class="review">
-      <span class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
-      <p class="review-title">« Un délice pour les papilles »</p>
-      <blockquote>Le bonheur de découvrir son plat sur son lieu de travail… un délice pour les papilles.</blockquote>
-      <figcaption class="who"><span class="avatar">AC</span><div><b>A. C.</b><small>Avis Google</small></div></figcaption>
-    </figure>
-    <a class="review review-more" href="https://share.google/crG01oWA2XvBEBfjL" target="_blank" rel="noopener">
-      <span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span>
-      <p class="review-title">Tous nos avis sur Google</p>
-      <span class="sol-link">Lire les avis <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></i></span>
-    </a>
   </div>
 </section>
 
 
 <!-- ================= NOTRE HISTOIRE ================= -->
-<section class="section bg-cream has-deco" id="histoire">
-  <img class="illu origin-illu" src="/LCDJsite/assets/brand/jeanine-cuisine.svg" alt="" width="240" height="180" loading="lazy">
-  <div class="wrap">
-    <div class="section-head center-head reveal">
-      <span class="eyebrow">Notre histoire</span>
-      <h2>Du fait maison. Pas du fait semblant.</h2>
-    </div>
-    <div class="origin-grid">
-      <article class="origin reveal">
-        <figure><img src="/LCDJsite/assets/img/jeanine-480.webp" width="480" height="600" loading="lazy" alt="Photo d'archive de Jeanine dans sa cuisine"></figure>
+<section class="origin" id="histoire">
+  <div class="wrap origin__grid">
+    <figure class="origin__archive">
+      <img src="/LCDJsite/assets/img/jeanine-800.webp" srcset="/LCDJsite/assets/img/jeanine-480.webp 480w, /LCDJsite/assets/img/jeanine-800.webp 800w"
+           sizes="(max-width: 900px) 90vw, 40vw" width="800" height="1152" loading="lazy" alt="Photo d'archive de Jeanine dans sa cuisine">
+      <figcaption>Jeanine, en cuisine</figcaption>
+    </figure>
+    <div class="origin__text">
+      <span class="folio">Notre histoire</span>
+      <h2 class="t-title">Du fait maison. Pas du fait semblant.</h2>
+      <div class="origin__pair">
         <div>
           <h3>À l'origine ?</h3>
           <p>Jeanine, notre grand-mère, et sa cuisine. Elle nous a transmis l'amour du produit, le respect des recettes et le goût du travail bien fait.</p>
         </div>
-      </article>
-      <article class="origin reveal d1">
-        <figure><img src="/LCDJsite/assets/img/hugo-theo-800.webp" width="800" height="533" loading="lazy" alt="Hugo et Théo, les deux cousins fondateurs, dans leur cuisine"></figure>
         <div>
           <h3>Et aujourd'hui ?</h3>
           <p>Deux cousins, Hugo et Théo, qui cuisinent en Normandie pour les entreprises de Rouen et de Seine-Maritime, avec la même exigence.</p>
         </div>
-      </article>
+      </div>
+      <figure class="origin__today">
+        <img src="/LCDJsite/assets/img/hugo-theo-800.webp" srcset="/LCDJsite/assets/img/hugo-theo-480.webp 480w, /LCDJsite/assets/img/hugo-theo-800.webp 800w, /LCDJsite/assets/img/hugo-theo-full.webp 960w"
+             sizes="(max-width: 900px) 90vw, 46vw" width="800" height="533" loading="lazy" alt="Hugo et Théo, les deux cousins fondateurs, dans leur cuisine">
+      </figure>
+      <a href="/LCDJsite/notre-histoire/" class="link c-green">Découvrir notre histoire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
     </div>
-    <div class="center-cta reveal"><a href="/LCDJsite/notre-histoire/" class="btn btn-outline">Découvrir notre histoire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="section" id="faq">
-  <div class="wrap faq-grid">
-    <div class="reveal">
-      <span class="eyebrow">Questions fréquentes</span>
-      <h2>Vous vous demandez sûrement…</h2>
-      <p class="lead">Une autre question ? Écrivez-nous à <a href="mailto:contact@lacuisinedejeanine.fr"><b>contact@lacuisinedejeanine.fr</b></a>.</p>
-      <a href="/LCDJsite/frigo-connecte/#faq" class="btn btn-outline btn-sm">Toutes les questions sur le frigo</a>
+<section class="faq" id="faq">
+  <div class="wrap faq__grid">
+    <div>
+      <span class="folio">Questions fréquentes</span>
+      <h2 class="t-title">Vous vous demandez sûrement…</h2>
+      <p class="lead">Une autre question ? Écrivez-nous à <a href="mailto:contact@lacuisinedejeanine.fr" class="c-green"><b>contact@lacuisinedejeanine.fr</b></a>.</p>
+      <a href="/LCDJsite/frigo-connecte/#faq" class="link c-green">Toutes les questions sur le frigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
     </div>
-    <div class="faq-list reveal d1">
+    <div class="faq__list">
       <details open>
         <summary>Combien coûte le frigo connecté ? <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary>
         <p>À partir de 350 € HT par mois. Ce loyer comprend l'installation, la livraison, le réassort, le nettoyage et la maintenance. Le tarif est ajusté selon votre effectif et votre localisation, pour un contrat de 12 mois minimum.</p>
@@ -348,22 +318,21 @@
 </section>
 
 <!-- ================= DEVIS / CONTACT ================= -->
-<section class="section contact contact-light" id="devis">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Parlons-en</span>
-      <h2>Ça pourrait marcher chez vous ?</h2>
-      <p class="lead">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
-      <ul class="contact-points">
+<section class="contact" id="devis">
+  <div class="wrap contact__grid">
+    <div>
+      <span class="folio">Parlons-en</span>
+      <h2 class="t-big contact__intro">Ça pourrait marcher chez vous ?</h2>
+      <p class="lead contact__intro">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
+      <ul class="contact__points">
         <li>Étude personnalisée et devis gratuits</li>
         <li>Réponse sous 24 h ouvrées</li>
+        <li>Partout en Seine-Maritime (76)</li>
       </ul>
-      <div class="contact-direct">
-        <a href="mailto:contact@lacuisinedejeanine.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> contact@lacuisinedejeanine.fr</a>
-      </div>
+      <a class="contact__mail" href="mailto:contact@lacuisinedejeanine.fr">contact@lacuisinedejeanine.fr</a>
     </div>
 
-    <form class="form-card reveal d1" id="devisForm" action="/LCDJsite/contact.php" method="post" novalidate>
+    <form class="form" id="devisForm" action="/LCDJsite/contact.php" method="post" novalidate>
       <h3>Votre demande</h3>
       <p>2 minutes, et on s'occupe du reste.</p>
       <div class="form-row">
@@ -387,7 +356,7 @@
       <input type="hidden" name="ts" id="f-ts" value="">
       <div class="form-foot">
         <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-        <button type="submit" class="btn btn-primary">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        <button type="submit" class="btn">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
         <p class="form-legal">Vos informations servent uniquement à répondre à votre demande. <a href="/LCDJsite/mentions-legales/#confidentialite">Politique de confidentialité</a>.</p>
       </div>
     </form>

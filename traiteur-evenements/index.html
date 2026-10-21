@@ -70,102 +70,109 @@
 <main id="contenu">
 
 
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div class="hero-anim">
-      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/LCDJsite/">Accueil</a><span aria-hidden="true">/</span><span>Traiteur &amp; événements</span></nav>
-      <span class="eyebrow">Sur-mesure</span>
-      <h1>Vos événements, notre cuisine.</h1>
-      <p class="lead">Réunion, séminaire, pot de départ ou soirée client : on compose une prestation à votre image, avec la même cuisine maison que pour le quotidien de vos équipes.</p>
-      <div class="page-hero-ctas">
-        <a href="#devis" class="btn btn-primary">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-        <a href="#prestations" class="btn btn-outline">Nos prestations</a>
+<!-- ================= EN-TÊTE : la table, en plein écran ================= -->
+<section class="ph-cover">
+  <img src="/LCDJsite/assets/img/traiteur-buffet-wide-1920.webp"
+       srcset="/LCDJsite/assets/img/traiteur-buffet-wide-1200.webp 1200w, /LCDJsite/assets/img/traiteur-buffet-wide-1920.webp 1920w"
+       sizes="100vw" width="1920" height="1200" fetchpriority="high"
+       alt="Buffet traiteur : paniers de pain grillé maison et planche de charcuterie et fromages">
+  <div class="ph-cover__panel">
+    <div class="wrap">
+      <div class="ph-cover__box">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/LCDJsite/">Accueil</a><span aria-hidden="true">/</span><span>Traiteur &amp; événements</span></nav>
+        <span class="folio c-beige">Sur-mesure</span>
+        <h1 class="t-big">Vos événements, notre cuisine.</h1>
+        <p class="lead">Réunion, séminaire, pot de départ ou soirée client : on compose une prestation à votre image, avec la même cuisine maison que pour le quotidien de vos équipes.</p>
+        <div class="actions">
+          <a href="#devis" class="btn" data-motif="evenement">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <a href="#prestations" class="link c-beige">Nos prestations</a>
+        </div>
       </div>
-    </div>
-    <div class="page-hero-photo hero-visual">
-      <img src="/LCDJsite/assets/img/traiteur-buffet-800.webp"
-           srcset="/LCDJsite/assets/img/traiteur-buffet-480.webp 480w, /LCDJsite/assets/img/traiteur-buffet-800.webp 800w, /LCDJsite/assets/img/traiteur-buffet-1200.webp 1200w"
-           sizes="(max-width: 900px) 90vw, 480px" width="800" height="1000" fetchpriority="high"
-           alt="Buffet traiteur : paniers de pain grillé maison et planche de charcuterie et fromages">
     </div>
   </div>
 </section>
 
-<!-- ================= PRESTATIONS ================= -->
-<section class="section bg-green" id="prestations">
+<!-- ================= PRESTATIONS : comme une carte ================= -->
+<section class="prest" id="prestations">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="prest__head">
       <div>
-        <span class="eyebrow">Nos prestations</span>
-        <h2>Du petit-déjeuner au cocktail</h2>
+        <span class="folio">Nos prestations</span>
+        <h2 class="t-title">Du petit-déjeuner au cocktail</h2>
       </div>
       <p class="lead">Chaque prestation est construite avec vous : nombre d'invités, horaires, format et budget.</p>
     </div>
-    <div class="cards-2 reveal">
-      <div class="card"><h3>Petits-déjeuners &amp; pauses café</h3><p>Viennoiseries, jus frais et boissons chaudes pour bien démarrer une réunion ou une journée de formation.</p></div>
-      <div class="card"><h3>Déjeuners &amp; repas d'affaires</h3><p>Buffets gourmands ou service à table, adaptés à vos contraintes et à vos invités.</p></div>
-      <div class="card"><h3>Cocktails &amp; réceptions</h3><p>Canapés, verrines, planches et pièces salées et sucrées pour vos inaugurations, pots et soirées clients.</p></div>
-      <div class="card"><h3>Séminaires &amp; journées d'étude</h3><p>Une offre complète avec pauses et repas, organisée pour que vous n'ayez à penser qu'au contenu.</p></div>
-    </div>
+    <ul class="prest__list">
+      <li><h3>Petits-déjeuners &amp; pauses café</h3><p>Viennoiseries, jus frais et boissons chaudes pour bien démarrer une réunion ou une journée de formation.</p></li>
+      <li><h3>Déjeuners &amp; repas d'affaires</h3><p>Buffets gourmands ou service à table, adaptés à vos contraintes et à vos invités.</p></li>
+      <li><h3>Cocktails &amp; réceptions</h3><p>Canapés, verrines, planches et pièces salées et sucrées pour vos inaugurations, pots et soirées clients.</p></li>
+      <li><h3>Séminaires &amp; journées d'étude</h3><p>Une offre complète avec pauses et repas, organisée pour que vous n'ayez à penser qu'au contenu.</p></li>
+    </ul>
   </div>
 </section>
 
 <!-- ================= EN IMAGES ================= -->
-<section class="section">
-  <div class="wrap split">
-    <div class="event-mosaic reveal">
-      <figure><img src="/LCDJsite/assets/img/traiteur-pain-800.webp" srcset="/LCDJsite/assets/img/traiteur-pain-480.webp 480w, /LCDJsite/assets/img/traiteur-pain-800.webp 800w" sizes="(max-width: 900px) 50vw, 300px" width="800" height="1000" loading="lazy" alt="Panier de pain grillé maison sur une table de buffet"></figure>
-      <figure><img src="/LCDJsite/assets/img/traiteur-focaccia-dessus-480.webp" width="480" height="600" loading="lazy" alt="Focaccia maison découpée, vue du dessus"></figure>
-      <figure><img src="/LCDJsite/assets/img/traiteur-focaccia-480.webp" width="480" height="600" loading="lazy" alt="Focaccia garnie de lard, tomates séchées et groseilles"></figure>
-    </div>
-    <div class="reveal d1">
-      <span class="eyebrow">Fait maison</span>
+<section class="mosaic">
+  <div class="wrap mosaic__grid">
+    <figure class="m1">
+      <img src="/LCDJsite/assets/img/traiteur-focaccia-1200.webp" srcset="/LCDJsite/assets/img/traiteur-focaccia-800.webp 800w, /LCDJsite/assets/img/traiteur-focaccia-1200.webp 1200w"
+           sizes="(max-width: 900px) 100vw, 58vw" width="1200" height="1500" loading="lazy" alt="Focaccia garnie de lard, tomates séchées et groseilles, sur la table du buffet">
+    </figure>
+    <figure class="m2">
+      <img src="/LCDJsite/assets/img/traiteur-pain-800.webp" srcset="/LCDJsite/assets/img/traiteur-pain-480.webp 480w, /LCDJsite/assets/img/traiteur-pain-800.webp 800w, /LCDJsite/assets/img/traiteur-pain-1200.webp 1200w"
+           sizes="(max-width: 900px) 50vw, 40vw" width="800" height="1000" loading="lazy" alt="Panier de pain grillé maison sur une table de buffet">
+    </figure>
+    <figure class="m3">
+      <img src="/LCDJsite/assets/img/focaccia-dessus-sq-800.webp" srcset="/LCDJsite/assets/img/focaccia-dessus-sq-800.webp 800w, /LCDJsite/assets/img/focaccia-dessus-sq-1200.webp 1200w"
+           sizes="(max-width: 900px) 50vw, 40vw" width="800" height="800" loading="lazy" alt="Focaccia maison découpée, vue du dessus">
+    </figure>
+    <div class="mosaic__text">
+      <span class="folio">Fait maison</span>
       <h2>Tout sort de notre cuisine</h2>
       <p>Focaccias, planches, pains grillés, verrines : on prépare tout nous-mêmes en Normandie, avec des produits frais. C'est ce qui fait la différence avec un traiteur industriel, et vos invités le sentent.</p>
-      <ul class="checklist">
+      <ul class="includes stack">
         <li>Produits frais et de saison</li>
         <li>Viandes françaises</li>
         <li>Livraison et mise en place sur votre site</li>
       </ul>
-      <a href="#devis" class="btn btn-green" data-motif="evenement">Parlez-nous de votre événement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="#devis" class="link c-green" data-motif="evenement">Parlez-nous de votre événement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
 <!-- ================= DÉROULÉ ================= -->
-<section class="section bg-cream">
+<section class="howto">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="howto__head">
       <div>
-        <span class="eyebrow">Organisation</span>
-        <h2>Trois étapes, zéro stress</h2>
+        <span class="folio">Organisation</span>
+        <h2 class="t-title">Trois étapes, zéro stress</h2>
       </div>
     </div>
-    <div class="cards-3 reveal">
-      <div class="card"><span class="num">01</span><h3>Vous nous décrivez l'événement</h3><p>Date, lieu, nombre d'invités, format souhaité et budget.</p></div>
-      <div class="card"><span class="num">02</span><h3>On vous fait une proposition</h3><p>Un menu sur-mesure et un devis détaillé, ajustables jusqu'à ce que tout vous convienne.</p></div>
-      <div class="card"><span class="num">03</span><h3>On s'occupe du reste</h3><p>Préparation dans notre cuisine, livraison et mise en place le jour J.</p></div>
-    </div>
+    <ol class="howto__steps">
+      <li><span class="outline-num" aria-hidden="true">1</span><h3>Vous nous décrivez l'événement</h3><p>Date, lieu, nombre d'invités, format souhaité et budget.</p></li>
+      <li><span class="outline-num" aria-hidden="true">2</span><h3>On vous fait une proposition</h3><p>Un menu sur-mesure et un devis détaillé, ajustables jusqu'à ce que tout vous convienne.</p></li>
+      <li><span class="outline-num" aria-hidden="true">3</span><h3>On s'occupe du reste</h3><p>Préparation dans notre cuisine, livraison et mise en place le jour J.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- ================= DEVIS / CONTACT ================= -->
-<section class="section contact contact-light" id="devis">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Parlons-en</span>
-      <h2>Ça pourrait marcher chez vous ?</h2>
-      <p class="lead">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
-      <ul class="contact-points">
+<section class="contact" id="devis">
+  <div class="wrap contact__grid">
+    <div>
+      <span class="folio">Parlons-en</span>
+      <h2 class="t-big contact__intro">Ça pourrait marcher chez vous ?</h2>
+      <p class="lead contact__intro">Dites-nous en un peu plus sur votre entreprise : on revient vers vous avec une proposition adaptée.</p>
+      <ul class="contact__points">
         <li>Étude personnalisée et devis gratuits</li>
         <li>Réponse sous 24 h ouvrées</li>
+        <li>Partout en Seine-Maritime (76)</li>
       </ul>
-      <div class="contact-direct">
-        <a href="mailto:contact@lacuisinedejeanine.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> contact@lacuisinedejeanine.fr</a>
-      </div>
+      <a class="contact__mail" href="mailto:contact@lacuisinedejeanine.fr">contact@lacuisinedejeanine.fr</a>
     </div>
 
-    <form class="form-card reveal d1" id="devisForm" action="/LCDJsite/contact.php" method="post" novalidate>
+    <form class="form" id="devisForm" action="/LCDJsite/contact.php" method="post" novalidate>
       <h3>Votre demande</h3>
       <p>2 minutes, et on s'occupe du reste.</p>
       <div class="form-row">
@@ -189,7 +196,7 @@
       <input type="hidden" name="ts" id="f-ts" value="">
       <div class="form-foot">
         <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-        <button type="submit" class="btn btn-primary">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        <button type="submit" class="btn">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
         <p class="form-legal">Vos informations servent uniquement à répondre à votre demande. <a href="/LCDJsite/mentions-legales/#confidentialite">Politique de confidentialité</a>.</p>
       </div>
     </form>

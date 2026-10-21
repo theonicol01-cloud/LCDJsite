@@ -773,3 +773,10 @@ img.doodle{display:block;height:auto;aspect-ratio:auto;object-fit:contain;border
   .doodle.doodle--menu{position:static;width:60px;margin:0 0 4px auto}
   .doodle.doodle--side{display:none}
 }
+
+/* pastilles de prix : rond dessiné à la main (charte) */
+.pastille{background:url('../brand/pastille.svg') center/100% 100% no-repeat;border-radius:0;width:146px;height:146px}
+.hero2__photo .pastille{width:136px;height:136px}
+@media(max-width:900px){
+  .hero2__photo .pastille,.ph-product__photo .pastille,.ph-plate__bowl .pastille{width:120px;height:120px}
+}

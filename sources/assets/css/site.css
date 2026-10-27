@@ -780,3 +780,7 @@ img.doodle{display:block;height:auto;aspect-ratio:auto;object-fit:contain;border
 @media(max-width:900px){
   .hero2__photo .pastille,.ph-product__photo .pastille,.ph-plate__bowl .pastille{width:120px;height:120px}
 }
+
+/* accueil : pastille ronde pleine (retour au rond net) */
+.hero2__photo .pastille{background:var(--rouge);border-radius:50%}
+.band__photo img.pos-frigo{object-position:30% 60%}

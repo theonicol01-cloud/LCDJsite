@@ -787,3 +787,5 @@ img.doodle{display:block;height:auto;aspect-ratio:auto;object-fit:contain;border
 
 /* toutes les pastilles : rond plein et net (retour demandé) */
 .pastille{background:var(--rouge);border-radius:50%}
+
+.trust img.logo-tall{height:32px}

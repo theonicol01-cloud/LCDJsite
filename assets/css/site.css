@@ -859,3 +859,4 @@ img.cutout{position:absolute;z-index:3;height:auto;pointer-events:none;will-chan
 .columns--bowl{position:relative;overflow-x:clip}
 .cutout--cols{width:clamp(150px,19vw,280px);right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:calc(-1 * clamp(60px,8vw,120px));transform:rotate(-14deg)}
 @media(max-width:900px){.cutout--cols{width:120px;top:-50px;right:12px}}
+.head-split--solo{grid-template-columns:1fr}

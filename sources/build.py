@@ -74,6 +74,10 @@ def build():
     ht.write_text(ht.read_text().replace("sha256-REPLACE", "sha256-" + sha))
 
     head = (SRC / "partials/head.html").read_text()
+    # empreinte des fichiers CSS/JS : force le navigateur à recharger après chaque modif
+    for rel in ("assets/css/site.css", "assets/js/site.js"):
+        v = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()[:8]
+        head = head.replace('"/' + rel + '"', '"/' + rel + '?v=' + v + '"')
     header = (SRC / "partials/header.html").read_text()
     footer = (SRC / "partials/footer.html").read_text()
     urls = []

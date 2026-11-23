@@ -860,3 +860,25 @@ img.cutout{position:absolute;z-index:3;height:auto;pointer-events:none;will-chan
 .cutout--cols{width:clamp(150px,19vw,280px);right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:calc(-1 * clamp(60px,8vw,120px));transform:rotate(-14deg)}
 @media(max-width:900px){.cutout--cols{width:120px;top:-50px;right:12px}}
 .head-split--solo{grid-template-columns:1fr}
+/* photos lifestyle & nouvelles photos (nov. 2026) */
+.life-shot{position:relative;background:#2a1a12;color:var(--cream)}
+.life-shot img{width:100%;height:min(90vh,900px);min-height:440px;object-fit:cover;object-position:60% 35%;display:block}
+.life-shot::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,12,8,.55) 0%,rgba(20,12,8,0) 45%);pointer-events:none}
+.life-shot__caption{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);z-index:2}
+.life-shot__big{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.015em;font-size:clamp(2.4rem,6vw,5.6rem);margin:0;color:var(--cream)}
+.ph-plate__bowl--photo{margin-right:0}
+.ph-plate__bowl--photo img{max-width:none;aspect-ratio:4/4.6;object-fit:cover;object-position:40% 30%;border-radius:24px;-webkit-mask-image:none;mask-image:none}
+.ph-plate__bowl--photo .pastille{left:-44px;right:auto;top:auto;bottom:12%}
+.menu-photo{margin-top:34px}
+.menu-photo img{width:100%;aspect-ratio:4/4.2;object-fit:cover;border-radius:var(--r)}
+.duo img.is-cut{border-radius:0;object-fit:contain}
+.band__photo img.pos-top{object-position:50% 62%}
+@media(max-width:900px){
+  .ph-plate__bowl--photo{margin:0}
+  .ph-plate__bowl--photo .pastille{left:auto;right:14px;top:-40px;bottom:auto}
+}
+@media(max-width:700px){
+  .life-shot img{height:auto;min-height:0;aspect-ratio:2061/2200;object-position:50% 0}
+  .life-shot::after{background:linear-gradient(0deg,rgba(20,12,8,.6) 0%,rgba(20,12,8,0) 40%)}
+  .life-shot__caption{top:auto;bottom:28px;transform:none}
+}

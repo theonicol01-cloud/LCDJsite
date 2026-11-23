@@ -882,3 +882,23 @@ img.cutout{position:absolute;z-index:3;height:auto;pointer-events:none;will-chan
   .life-shot::after{background:linear-gradient(0deg,rgba(20,12,8,.6) 0%,rgba(20,12,8,0) 40%)}
   .life-shot__caption{top:auto;bottom:28px;transform:none}
 }
+
+/* écriture à la main (Caveat, OFL) : légendes de plats, prénoms */
+@font-face{font-family:'Caveat';src:url('../fonts/caveat-latin.woff2') format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+.hand{font-family:'Caveat',cursive;font-weight:600;letter-spacing:0;text-transform:none}
+figcaption.hand{font-size:1.45rem;line-height:1.1;color:var(--green);margin-top:12px}
+.duo figcaption.hand{font-size:1.5rem;color:var(--green);transform:rotate(-2deg);transform-origin:left}
+.ph-archive__photo figcaption.hand{font-size:1.7rem;padding:4px 16px 6px;color:var(--brown)}
+.hand-label{position:absolute;z-index:4;font-size:clamp(1.3rem,1.8vw,1.7rem);color:var(--green);white-space:nowrap;transform:rotate(-6deg);pointer-events:none}
+.hand-label--voices{right:calc(max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter))) + clamp(150px,20vw,290px) - 6px);top:clamp(40px,4.5vw,70px)}
+/* page contact : photo des fondateurs */
+.ph-contact__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(30px,5vw,80px);align-items:center}
+.ph-contact__photo{position:relative;margin:0}
+.ph-contact__photo img:not(.doodle){width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r)}
+.ph-contact__photo figcaption.hand{text-align:right;font-size:1.6rem;transform:rotate(-2deg)}
+.doodle.doodle--contact{position:absolute;left:-34px;top:-30px;width:84px;transform:rotate(-10deg)}
+@media(max-width:900px){
+  .ph-contact__grid{grid-template-columns:minmax(0,1fr)}
+  .doodle.doodle--contact{left:auto;right:10px;top:-34px;width:64px}
+  .hand-label--voices{right:150px;top:0;font-size:1.25rem}
+}

@@ -102,3 +102,27 @@
       .finally(function () { btn.disabled = false; btn.innerHTML = label; });
   });
 })();
+
+/* ---- v4 : un peu de vie (plats qui tournent au scroll, pictos qui apparaissent) ---- */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  // pictos et « Hmmm. » : petite apparition quand on arrive dessus
+  var pops = document.querySelectorAll('.doodle, .hmmm');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('popped'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -12% 0px' });
+  pops.forEach(function (el) { el.classList.add('pop-ready'); io.observe(el); });
+  // plats détourés : rotation douce liée au défilement
+  var spins = Array.prototype.slice.call(document.querySelectorAll('[data-spin]'));
+  if (!spins.length) return;
+  var base = spins.map(function (el) { return parseFloat(el.dataset.base || '0'); });
+  var ticking = false;
+  function draw() {
+    var y = window.scrollY;
+    spins.forEach(function (el, i) { el.style.transform = 'rotate(' + (base[i] + y * parseFloat(el.dataset.spin)) + 'deg)'; });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(draw); } }, { passive: true });
+  draw();
+})();

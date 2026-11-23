@@ -789,3 +789,73 @@ img.doodle{display:block;height:auto;aspect-ratio:auto;object-fit:contain;border
 .pastille{background:var(--rouge);border-radius:50%}
 
 .trust img.logo-tall{height:32px}
+
+/* ==========================================================================
+   V4 « PEP'S » — pêche de la charte, plats détourés, un peu de mouvement
+   ========================================================================== */
+:root{--peche:#F6D0A8;--peche-ink:#7A3B1F}
+.on-peche{background:var(--peche)}
+.on-peche .lead,.on-peche .muted,.on-peche p{color:#5C3423}
+.on-peche .offer2__hook{color:var(--brown)}
+.c-cream{color:var(--cream)}
+
+/* plats détourés posés « en autocollant » à cheval sur deux sections */
+img.cutout{position:absolute;z-index:3;height:auto;pointer-events:none;will-change:transform}
+.manifesto--bowl{overflow:visible}
+.manifesto--bowl .manifesto__illu{display:none}
+.cutout--hero{width:clamp(170px,24vw,340px);right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:calc(-1 * clamp(80px,11vw,160px));transform:rotate(-12deg)}
+.manifesto--bowl .t-statement{max-width:21em}
+.voices--short{position:relative;overflow:visible}
+.voices--short__grid{position:static}
+.cutout--voices{width:clamp(150px,20vw,290px);right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:calc(-1 * clamp(70px,9vw,140px));transform:rotate(18deg)}
+.voices--short .google-score{position:relative;z-index:4}
+
+/* « Hmmm. » : la typo comme un cri gourmand */
+.hmmm{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:.85;color:var(--green);font-size:clamp(4rem,12vw,10rem);margin:0 0 18px}
+
+/* grande photo chez un client */
+.client-shot{position:relative;color:var(--cream);background:#2a1a12}
+.client-shot img{width:100%;height:min(88vh,860px);min-height:420px;object-fit:cover;object-position:30% 60%;display:block}
+.client-shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,18,12,0) 45%,rgba(30,18,12,.62) 100%);pointer-events:none}
+.client-shot__caption{position:absolute;left:0;right:0;bottom:clamp(28px,5vw,64px);z-index:2;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px}
+.client-shot__big{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.01em;font-size:clamp(1.8rem,4vw,3.6rem);margin:0;color:var(--cream)}
+.client-shot .link{color:var(--cream)}
+
+/* mouvement, très dosé */
+@keyframes lcdj-wiggle{0%,100%{transform:rotate(-9deg)}30%{transform:rotate(-15deg) scale(1.06)}60%{transform:rotate(-5deg) scale(1.03)}}
+.pastille{transition:transform .3s var(--ease)}
+.hero2__photo:hover .pastille,.ph-product__photo:hover .pastille,.ph-plate__bowl:hover .pastille{animation:lcdj-wiggle .7s var(--ease)}
+.js .doodle.pop-ready{opacity:0;transform:scale(.6) rotate(-14deg);transition:opacity .5s var(--ease),transform .6s cubic-bezier(.34,1.56,.64,1)}
+.js .doodle.pop-ready.popped{opacity:1;transform:none}
+.js .hmmm.pop-ready{opacity:0;transform:translateY(30px) scale(.92);transition:opacity .6s var(--ease),transform .7s cubic-bezier(.34,1.56,.64,1)}
+.js .hmmm.pop-ready.popped{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .cutout--hero{top:-70px;width:150px;right:12px}
+  .cutout--voices{top:-60px;width:130px;right:10px}
+  .manifesto--bowl .t-statement{padding-right:0}
+  .client-shot img{height:auto;min-height:0;aspect-ratio:4/3.6}
+  .client-shot::after{background:linear-gradient(180deg,rgba(30,18,12,0) 30%,rgba(30,18,12,.7) 100%)}
+}
+@media(prefers-reduced-motion:reduce){img.cutout{transform:none!important}.js .doodle.pop-ready,.js .hmmm.pop-ready{opacity:1;transform:none}}
+/* v4 ajustements : le bol du manifeste déborde vers le bas, pas sur les logos */
+.cutout--hero{top:auto;bottom:calc(-1 * clamp(80px,10vw,150px))}
+.trio-offers.on-peche{position:relative;z-index:1}
+.manifesto--bowl{z-index:2;position:relative}
+.cutout--voices{top:calc(-1 * clamp(50px,6vw,90px))}
+.client-shot__caption{flex-direction:column;align-items:flex-start;justify-content:flex-end}
+@media(max-width:900px){.cutout--hero{bottom:-70px;top:auto}.cutout--voices{top:-50px}}
+.manifesto--bowl,.voices--short{overflow-x:clip}
+/* v4 sur tout le site */
+.contact{background:var(--peche)}
+.contact .lead,.contact__points li{color:#5C3423}
+.contact__points li{border-color:rgba(70,39,26,.22)}
+.on-peche .menu-row span,.on-peche .includes li{color:#5C3423}
+.price-poster.on-peche p:not(.price-poster__amount){color:#5C3423}
+.timeline.on-peche li::after{background:rgba(70,39,26,.25)}
+.prest.on-peche .prest__list li{border-color:rgba(70,39,26,.25)}
+.voices--bowl{position:relative;overflow-x:clip}
+.voices--bowl .hmmm{margin-top:10px}
+.columns--bowl{position:relative;overflow-x:clip}
+.cutout--cols{width:clamp(150px,19vw,280px);right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:calc(-1 * clamp(60px,8vw,120px));transform:rotate(-14deg)}
+@media(max-width:900px){.cutout--cols{width:120px;top:-50px;right:12px}}
